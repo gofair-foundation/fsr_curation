@@ -17,7 +17,24 @@ Both work together, as the 2) is included in the 1), documenting the actions in 
 
 **Overall curation procedure:**
 
-**![img](images/fig1.png)**
+```mermaid
+flowchart TD
+    A[1A: choose issue] 
+    A-->B[1B: check for duplicates] -->C[1C: quality check] -->D[1D: propose an action]
+    D-->|assign a reviewer| E{2: decide}
+    style E fill:#f7eb02
+    E -->|reject proposal| F[3D: assign a second reviewer]
+    E -->|request improvements|D
+    E -->|approve proposal|G{3: perfom action}
+    G -->|improvement required|H[3B: improve metadata]
+    G -->|approve as is|I[3A: approve FSR nanopub]
+    G -->|reject FSR nanopub|K[3C: retract/disapprove FSR nanopub]
+    H--> I
+    F --> E
+    style A stroke:#333,stroke-width:4px
+    style K fill:#f20707
+    style I fill:#07f23a
+```
 
 #### **GitHub Setup (only needed once) ->** [**G1 A Setup**](#g1-a-setup-steps) 
 
