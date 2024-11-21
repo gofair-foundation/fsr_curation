@@ -1,21 +1,21 @@
-# **GFF Qualification workflow for FAIR Supporting Resources (FSR)**
+# **GFF Curation workflow for FAIR Supporting Resources (FSR) metadata**
 
 ## **Introduction**
 
-Please be aware that only qualified FIP (or 3PFF) facilitators or trainers can participate in this process. Please check this [table ](https://docs.google.com/spreadsheets/d/1hLEimbWKdlyouIF4ZoerGG6mia58c98PsVQ8hIT4hqw/edit#gid=0)if your name is already registered. 
+Please be aware that only qualified FIP (or 3PFF) implementers, facilitators or trainers can participate in this process. Please check this [table ](https://docs.google.com/spreadsheets/d/1hLEimbWKdlyouIF4ZoerGG6mia58c98PsVQ8hIT4hqw/edit#gid=0)if your name is already registered. 
 
-An FSR qualification process requires **two facilitators** to quality-check new FSR nanopubs. The first facilitator acts as editor and checks if there exist more than one nanopub for the same FSR and checks the quality for the best nanopub (usually the newest) while proposing to retract the duplicates. The editor will then propose if the FSR nanopub should be accepted as is, requires changes or should be retracted. The editor assigns a reviewer, preferably one with expertise related to the FSR type, to check the action proposal for the FSR. The reviewer can accept it, request changes or reject it. If the reviewer’s answer is positive, the editor can follow the actions proposed to finally qualify it. 
+An FSR curation process requires **two qualified people** to curate new FSR nanopubs. The first person acts as editor and checks if there exist more than one nanopub for the same FSR and checks the quality of the best nanopub (usually the newest) while proposing to retract the duplicates. The editor will then propose if the FSR nanopub should be accepted as is, requires changes or should be retracted. The editor assigns a reviewer, preferably one with expertise related to the FSR type, to check the action proposal for the FSR. The reviewer can accept it, request changes or reject it. If the reviewer’s answer is positive, the editor can follow the actions proposed to finally approve it. 
 
 There are two main procedures to take into account:
 
-1. the functional qualification process (F steps)
-2. the documentation of the technical qualification process, which is handled via GitHub issues (G steps).
+1. the functional curation process (F steps)
+2. the documentation of the technical curation process, which is handled via GitHub issues (G steps).
 
 Both work together, as the 2) is included in the 1), documenting the actions in GitHub. 
 
-## **Functional qualification process - F steps**
+## **Functional curation process - F steps**
 
-**Overall quality-control procedure:**
+**Overall curation procedure:**
 
 **![img](images/fig1.png)**
 
@@ -23,8 +23,8 @@ Both work together, as the 2) is included in the 1), documenting the actions in 
 
 ### **F1 As Editor**
 
-A. Choose an issue from GitHub: https://github.com/gofair-foundation/fsr_qualification/issues - these issues are created by a [GitHub action](#appendix-b-refreshing-the-github-issues-list) which looks for unqualified FSRs in Nanodash.  
-   These can be filtered by label (FSR type) from https://github.com/gofair-foundation/fsr_qualification/labels  
+A. Choose an issue from GitHub: https://github.com/gofair-foundation/fsr_curation/issues - these issues are created by a [GitHub action](#appendix-b-refreshing-the-github-issues-list) which looks not curated FSRs in Nanodash.  
+   These can be filtered by label (FSR type) from https://github.com/gofair-foundation/fsr_curation/labels  
    Assign it to you (so that everybody can see that you are working on it)
 
 B. Check for duplicates
@@ -33,9 +33,9 @@ B. Check for duplicates
 2. The goal is to keep only the most informative nanopub, bear in mind that you should also check for the most frequently used resource in the FIPs/SIPs. Check their utilisation using the FSR thing URI within the [FSR in FIP/SIP API](https://github.com/peta-pico/dsw-nanopub-api/blob/main/tables/new_matrix_reduced.csv). However the most frequently used nanopub may need to be improved (as per the process in [F3B](#f-3b-proposal-accept-with-improvements) below).
 3. Duplicates will need to retracted/disapproved (see [F3C](#f-3c-when-the-fsr-nanopub-should-be-retracted)) and any accompanying GitHub issues closed accordingly. Therefore it is essential that the same person(s) work on all duplicates of one resource.  
 
-#### **Git Document Quality Check ->** [**G1 B**](#g1-b-steps-for-the-editor-to-document-the-quality-check)
+#### **Git Document Curation ->** [**G1 B**](#g1-b-steps-for-the-editor-to-document-the-curation)
 
-C. Perform Quality check and document it in the GitHub issue table:
+C. Quality check the existing nanopublication that provides the metadata of a FSR and document it in the GitHub issue table:
 
 1. Add your name and ORCID
 
@@ -80,7 +80,7 @@ C. reject the proposal
 - if the proposal is accepted with changes, the editor negotiates with the reviewer and makes adjustments until both are satisfied;
 - if the reviewer accepts the proposal: the editor proceeds with the proposed action:
 
-A. proposal - accept as is: qualify the FSR nanopub with the [qualification nanopub template](https://nanodash.knowledgepixels.com/publish?55&template=https://w3id.org/np/RApEyTXPOt_h81Ao0WpzRhigcgvqrbnNBCo8fEpsZ6CxU)  
+A. proposal - accept as is: approve the FSR nanopub with the [approval nanopub template](https://nanodash.knowledgepixels.com/publish?55&template=https://w3id.org/np/RApEyTXPOt_h81Ao0WpzRhigcgvqrbnNBCo8fEpsZ6CxU)  
 B. proposal - accept with improvements: proceed with the improvement (see below)  
 C. proposal - reject: disapprove/retract the nanopub (see below).  
 D. If the reviewer rejects your proposal, get another opinion. Follow the decision that has at least two supporters.
@@ -91,14 +91,14 @@ Make sure to get in contact with the creator of the FSR nanopub before you chang
 
 1. If the creator is the FIP Wizard 
    1. find the project, improve the metadata and publish a new nanopub
-   2. qualify the FSR nanopub with the [qualification nanopub template](https://nanodash.knowledgepixels.com/publish?55&template=https://w3id.org/np/RApEyTXPOt_h81Ao0WpzRhigcgvqrbnNBCo8fEpsZ6CxU)
+   2. approve the FSR nanopub with the [approval nanopub template](https://nanodash.knowledgepixels.com/publish?55&template=https://w3id.org/np/RApEyTXPOt_h81Ao0WpzRhigcgvqrbnNBCo8fEpsZ6CxU)
 
 2. If the creator is documented via an ORCID (then you have to work with nanodash)
    1. search for the nanopub-URI in the search of nanodash
    2. update as derived nanopublication, copy the URI of the subject in the original FSR nanopub into the short name, improve metadata and publish it
    3. in case you want to use a new template use this procedure: https://nanodash.knowledgepixels.com/publish?template=*newTemplateURI*&supersede=*oldNanopubURI* and copy the URI of the subject in the original FSR nanopub into the short name, improve metadata and publish it
    4. disapprove the old nanopub that has been superseeded with the nanopub with improved metadata
-   5. qualify the FSR nanopub with the [qualification nanopub template](https://nanodash.knowledgepixels.com/publish?55&template=https://w3id.org/np/RApEyTXPOt_h81Ao0WpzRhigcgvqrbnNBCo8fEpsZ6CxU)
+   5. approve the FSR nanopub with the [approval nanopub template](https://nanodash.knowledgepixels.com/publish?55&template=https://w3id.org/np/RApEyTXPOt_h81Ao0WpzRhigcgvqrbnNBCo8fEpsZ6CxU)
 
 
 ![img](images/fig2.png)
@@ -118,11 +118,11 @@ Make sure to get in contact with the creator of the FSR nanopub before you chang
 
 **![img](images/fig3.png)**
 
-#### **Git Document Final Qualification steps ->** [**G1 C**](#g1-c-final-steps-for-the-editor)
+#### **Git Document Final Curation steps ->** [**G1 C**](#g1-c-final-steps-for-the-editor)
 
-## **Technical qualification workflow (documentation in GitHub) - G Steps**
+## **Technical curation workflow (documentation in GitHub) - G Steps**
 
-For the whole workflow we have prepared this GFF GitHub repository to document all steps: https://github.com/gofair-foundation/fsr_qualification. The overall idea is that you should document what you do step for step. You complete the first table in the issue and then assign to the reviewer. The reviewer then reviews the proposed changes and will answer with a comment  with their verdict on whether they do not allow it, approve or request changes. The editor will then actually perform the changes in nanodash and finalise the documentation, then close the issue in GitHub.
+For the whole workflow we have prepared this GFF GitHub repository to document all steps: https://github.com/gofair-foundation/fsr_curation. The overall idea is that you should document what you do step for step. You complete the first table in the issue and then assign to the reviewer. The reviewer then reviews the proposed changes and will answer with a comment  with their verdict on whether they do not allow it, approve or request changes. The editor will then actually perform the changes in nanodash and finalise the documentation, then close the issue in GitHub.
 
 ### **Pre-requisites**
 
@@ -196,8 +196,8 @@ You will have received an email alert for the assigned issue, you can now view t
 
 # **Appendix A: Refreshing the GitHub issues list**
 
-The GitHub issues list is populated from NanoDash by a custom GitHub [action](https://github.com/gofair-foundation/fsr_qualification/actions/workflows/issue.yml). 
-This will create issues for new unqualified FSRs and close any open issues for FSRs that are no longer unqualified.
+The GitHub issues list is populated from NanoDash by a custom GitHub [action](https://github.com/gofair-foundation/fsr_curation/actions/workflows/issue.yml). 
+This will create issues for new not yet curated FSRs and close any open issues for FSRs that are no longer uncurated.
 
 The action is currently scheduled to run at 04:30 UTC on Sundays; to trigger it manually (e.g. after a FIP workshop): 
 
