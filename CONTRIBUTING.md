@@ -123,7 +123,7 @@ As the editor perform the actions based on the reviewer decision.
 3C. proposal - reject: the editor disapprove/retract the nanopub (see below).  
 
 
-3D. If the reviewer rejects your proposal, assign the issue to a second reviewer. You should follow the decision that has at least two supportersd.
+3D. If the reviewer rejects your proposal, assign the issue to a second reviewer. You should follow the decision that has at least two supporters.
 
 #### 3B Proposal accept with improvements:
 
