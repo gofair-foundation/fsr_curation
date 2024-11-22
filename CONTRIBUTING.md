@@ -118,7 +118,7 @@ As the curator perform the actions based on the reviewer decision.
 - if the proposal is accepted with changes: negotiate with the reviewer and makes adjustments until both of you are satisfied;
 - if the reviewer accepts the proposal: proceed with the proposed action:
 
-3A. proposal - accept as is: approve the FSR nanopub with the [approval nanopub template](https://nanodash.knowledgepixels.com/publish?55&template=https://w3id.org/np/RApEyTXPOt_h81Ao0WpzRhigcgvqrbnNBCo8fEpsZ6CxU)  
+3A. proposal - accept as is: approve the FSR nanopub with the [approval nanopub template](https://nanodash.petapico.org/publish?34&template=https://w3id.org/np/RAi7_UxEF3TTPBp7lmWOVvKR-jUmZgDfY_ZIe57dqbOnQ&template-version=latest)  
 3B. proposal - accept with improvements: proceed with the improvement (see below)  
 3C. proposal - reject: the curator disapprove/retract the nanopub (see below).  
 
@@ -131,14 +131,14 @@ Make sure to get in contact with the creator of the FSR nanopub before you chang
 
 1. If the creator is the FIP Wizard 
    1. find the project, improve the metadata and publish a new nanopub
-   2. approve the FSR nanopub with the [approval nanopub template](https://nanodash.knowledgepixels.com/publish?55&template=https://w3id.org/np/RApEyTXPOt_h81Ao0WpzRhigcgvqrbnNBCo8fEpsZ6CxU)
+   2. approve the FSR nanopub with the [approval nanopub template](https://nanodash.petapico.org/publish?34&template=https://w3id.org/np/RAi7_UxEF3TTPBp7lmWOVvKR-jUmZgDfY_ZIe57dqbOnQ&template-version=latest)
 
 2. If the creator is documented via an ORCID (then you have to work with nanodash)
    1. search for the nanopub-URI in the search of Nanodash
    2. update as derived nanopublication, copy the URI of the subject in the original FSR nanopub into the short name, improve metadata and publish it
    3. in case you want to use a new template use this procedure: https://nanodash.knowledgepixels.com/publish?template=*newTemplateURI*&supersede=*oldNanopubURI* and copy the URI of the subject in the original FSR nanopub into the short name, improve metadata and publish it
    4. disapprove the old nanopub that has been superseeded with the nanopub with improved metadata
-   5. approve the FSR nanopub with the [approval nanopub template](https://nanodash.knowledgepixels.com/publish?55&template=https://w3id.org/np/RApEyTXPOt_h81Ao0WpzRhigcgvqrbnNBCo8fEpsZ6CxU)
+   5. approve the FSR nanopub with the [approval nanopub template](https://nanodash.petapico.org/publish?34&template=https://w3id.org/np/RAi7_UxEF3TTPBp7lmWOVvKR-jUmZgDfY_ZIe57dqbOnQ&template-version=latest)
 
 If a FAIRsharing DOI needs to be added, in the FIP Wizard this can be added as a Resource URI to II.9 "Related resources to which this resource can be mapped to and which are used to derive its description". Similarly in nanodash this URI would be introduced as `exactMatch` in the last assertion statement and in the provenance of the nanopub use the statement "attributed to myself/others and (partly) derived from an existing entity" and add the DOI of the FAIRsharing record.
 
