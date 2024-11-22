@@ -28,7 +28,6 @@ flowchart TD
     style K fill:#f20707
     style I fill:#07f23a
 ```
-**![img](images/fig1.png)**
 
 ### **1 Curator actions**
 
