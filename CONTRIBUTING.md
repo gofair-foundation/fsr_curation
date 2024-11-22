@@ -4,7 +4,7 @@
 
 Please be aware that only qualified FIP (or 3PFF) implementers, facilitators or trainers can participate in this process. Please check this [table ](https://docs.google.com/spreadsheets/d/1hLEimbWKdlyouIF4ZoerGG6mia58c98PsVQ8hIT4hqw/edit#gid=0)if your name is already registered. 
 
-An FSR curation process requires **two qualified people** to curate new FSR nanopubs. The first person acts as editor and checks if there exist more than one nanopub for the same FSR and checks the quality of the best nanopub (usually the newest) while proposing to retract the duplicates. The editor will then propose if the FSR nanopub should be accepted as is, requires changes or should be retracted. The editor assigns a reviewer, preferably one with expertise related to the FSR type, to check the action proposal for the FSR. The reviewer can accept it, request changes or reject it. If the reviewer’s answer is positive, the editor can follow the actions proposed to finally approve it. 
+An FSR curation process requires **two qualified people** to curate new FSR nanopubs. The first person acts as curator and checks if there exist more than one nanopub for the same FSR and checks the quality of the best nanopub (usually the newest) while proposing to retract the duplicates. The curator will then propose if the FSR nanopub should be accepted as is, requires changes or should be retracted. The curator assigns a reviewer, preferably one with expertise related to the FSR type, to check the action proposal for the FSR. The reviewer can accept it, request changes or reject it. If the reviewer’s answer is positive, the curator can follow the actions proposed to finally approve it. 
 
 The whole curation process is supposed to be described in GitHub issues in this GitHub repository. To collaborate you need a GitHub account and the administrator needs to add the new reviewer to the curation team to grant write access to this repository.
 
@@ -30,7 +30,7 @@ flowchart TD
 ```
 **![img](images/fig1.png)**
 
-### **1 Editor actions**
+### **1 Curator actions**
 
 #### 1A. Choose an issue 
 from GitHub: https://github.com/gofair-foundation/fsr_curation/issues - these issues are created by a [GitHub action](#appendix-b-refreshing-the-github-issues-list) which looks not curated FSRs in Nanodash.  
@@ -109,18 +109,18 @@ To document your decision you are asked to:
    
    ![gh_issue_comment](images/gh_issue_comment.png)
 
-Reassign the issue back to the editor.
+Reassign the issue back to the curator.
 
 
-### 3 Final Editor actions
+### 3 Final Curator actions
 
-As the editor perform the actions based on the reviewer decision. 
+As the curator perform the actions based on the reviewer decision. 
 - if the proposal is accepted with changes: negotiate with the reviewer and makes adjustments until both of you are satisfied;
 - if the reviewer accepts the proposal: proceed with the proposed action:
 
 3A. proposal - accept as is: approve the FSR nanopub with the [approval nanopub template](https://nanodash.knowledgepixels.com/publish?55&template=https://w3id.org/np/RApEyTXPOt_h81Ao0WpzRhigcgvqrbnNBCo8fEpsZ6CxU)  
 3B. proposal - accept with improvements: proceed with the improvement (see below)  
-3C. proposal - reject: the editor disapprove/retract the nanopub (see below).  
+3C. proposal - reject: the curator disapprove/retract the nanopub (see below).  
 
 
 3D. If the reviewer rejects your proposal, assign the issue to a second reviewer. You should follow the decision that has at least two supporters.
