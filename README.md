@@ -7,3 +7,5 @@ The curation process requires two people, trained based on the [Three-Point FAIR
 
 See the guide on [contributing](CONTRIBUTING.md) that explains the functional curation process in conjunction with the git/GitHub workflow.
 
+This GitHub repository was created by Robin Bramley and Barbara Magagna. We want to thank Indrani Mahapatra for reviewing the contributing guidelines.
+
