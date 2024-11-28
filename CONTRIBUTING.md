@@ -144,6 +144,7 @@ If you don't get a reply within a reasonable time (max. two days), post a commen
    4. disapprove the old nanopub that has been superseeded with the nanopub with improved metadata
    5. approve the FSR nanopub with the [approval nanopub template](https://nanodash.petapico.org/publish?34&template=https://w3id.org/np/RAi7_UxEF3TTPBp7lmWOVvKR-jUmZgDfY_ZIe57dqbOnQ&template-version=latest)
 
+#### Adding a reference to FAIRsharing records
 If a FAIRsharing DOI needs to be added, then in the FIP Wizard this can be added as a Resource URI to II.9 "Related resources to which this resource can be mapped to and which are used to derive its description". Similarly, in Nanodash this URI would be introduced as `exactMatch` in the last assertion statement and in the provenance of the nanopub use the statement "attributed to myself/others and (partly) derived from an existing entity" and add the DOI of the FAIRsharing record.
 
 ```mermaid
