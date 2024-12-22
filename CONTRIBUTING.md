@@ -195,11 +195,11 @@ flowchart LR
 ```
 
 Finally 
-Edit the issue description to add your annotations in the bottom table between the pipe (|) delimiters.
+Edit the issue description to add your annotations in the bottom table between the pipe (|) delimiters. 
 
    ![gh_issue_md_editing_table2](images/gh_issue_md_editing_table2.png)
    
-and close the issue
+For all FSRs that should be approved, make sure the approval nanopub is created before you close the issue. 
 
    ![gh_issue_close](images/gh_issue_close.png)
 
