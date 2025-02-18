@@ -68,13 +68,13 @@ the existing nanopub that provides the metadata of a FSR and document it:
    
 5. Suggest replacement with new (persistent) web links if considered useful
    
-7. Check if the description is informative enough or if it needs to be corrected/improved (add Y or N)
+6. Check if the description is informative enough or if it needs to be corrected/improved (add Y or N)
 
-8. Check if the allocated FSR types are all correct (add Y or N)
+7. Check if the allocated **FSR types** are all correct (add Y or N) - If you think that a change is needed, this will have **consequence for its use in the FIPs**!
   
-9. Check if the resource is described in FAIRsharing and if a DOI exists. If so, then check if the nanopub already refers to it. In case the FAIRsharing does not refer to it, add it in the table. Be aware that FAIRsharing has not all types included and thus not all resources will have a reference in FAIRsharing.
+8. Check if the resource is described in FAIRsharing and if a DOI exists. If so, then check if the nanopub already refers to it. In case the FAIRsharing does not refer to it, add it in the table. Be aware that FAIRsharing has not all types included and thus not all resources will have a reference in FAIRsharing.
   
-11. If the FSR was created in the FIP wizard add an F or if it was created in the SIP wizard add an S to the table. Otherwise, if it was created in Nanodash, add the creator's ORCID. In addition, check if the `prov:wasDerivedFrom` in the pubinfo section of the nanopub resolves to the correct FSR project in the wizard (see https://github.com/fip-wizard/fip-wizard/issues/1)
+9. If the FSR was created in the FIP wizard add an F or if it was created in the SIP wizard add an S to the table. Otherwise, if it was created in Nanodash, add the creator's ORCID. In addition, check if the `prov:wasDerivedFrom` in the pubinfo section of the nanopub resolves to the correct FSR project in the wizard (see https://github.com/fip-wizard/fip-wizard/issues/1)
 
 Finally,
 
@@ -141,8 +141,12 @@ If you don't get a reply within a reasonable time (max. two days), post a commen
    1. search for the nanopub-URI in the search bar of Nanodash
    2. update as derived nanopub, copy the URI of the subject in the original FSR nanopub into the short name, improve metadata, and publish it
    3. in case you want to use a new template use this procedure: https://nanodash.knowledgepixels.com/publish?template=*newTemplateURI*&supersede=*oldNanopubURI* and copy the URI of the subject in the original FSR nanopub into the short name, improve metadata, and publish it
-   4. disapprove the old nanopub that has been superseeded with the nanopub with improved metadata
-   5. approve the FSR nanopub with the [approval nanopub template](https://nanodash.petapico.org/publish?34&template=https://w3id.org/np/RAi7_UxEF3TTPBp7lmWOVvKR-jUmZgDfY_ZIe57dqbOnQ&template-version=latest)
+   4. in case you need to **make a change regarding the types that apply** please follow these steps:
+      - Check if and in which questions the **FSR** is used **in FIPs** by using this API: [**find FSRs in FIP**](https://github.com/peta-pico/dsw-nanopub-api/blob/main/tables/new_matrix_reduced.csv)
+      - Adjust the choice in the FIP (and leave a comment to justify the adjustment)
+      - Re-publish the FIP
+   5. disapprove the old nanopub that has been superseeded with the nanopub with improved metadata
+   6. approve the FSR nanopub with the [approval nanopub template](https://nanodash.petapico.org/publish?34&template=https://w3id.org/np/RAi7_UxEF3TTPBp7lmWOVvKR-jUmZgDfY_ZIe57dqbOnQ&template-version=latest)
 
 #### Adding a reference to FAIRsharing records
 If a FAIRsharing DOI needs to be added, then in the FIP Wizard this can be added as a Resource URI to II.9 "Related resources to which this resource can be mapped to and which are used to derive its description". Similarly, in Nanodash this URI would be introduced as `exactMatch` in the last assertion statement and in the provenance of the nanopub use the statement "attributed to myself/others and (partly) derived from an existing entity" and add the DOI of the FAIRsharing record.
