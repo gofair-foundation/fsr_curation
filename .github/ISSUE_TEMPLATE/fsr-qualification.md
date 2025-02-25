@@ -1,6 +1,6 @@
 ---
-name: FSR qualification
-about: Qualifying FSRs
+name: FSR curation
+about: Curating FSRs
 title: ''
 labels: ''
 assignees: ''
