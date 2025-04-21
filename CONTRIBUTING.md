@@ -140,7 +140,7 @@ If you don't get a reply within a reasonable time (max. two days), post a commen
 2. If the creator is documented via an ORCID (then you work with Nanodash)
    1. search for the nanopub-URI in the search bar of Nanodash
    2. update as derived nanopub, copy the URI of the subject in the original FSR nanopub into the short name, improve metadata, and publish it
-   3. in case you want to use a new template use this procedure: https://nanodash.knowledgepixels.com/publish?template=*newTemplateURI*&supersede=*oldNanopubURI* and copy the Thing URI of the original FSR nanopub into the short name, improve metadata, add the old nanopub URI (not the thing URI!) in the Pub Info by adding a new element "derived" in the statement: *This nanopublication was derived from nanopub URI* and publish it
+   3. in case you want to use a new template use this procedure: https://nanodash.knowledgepixels.com/publish?template=*newTemplateURI*&supersede=*oldNanopubURI* and copy the Thing URI of the original FSR nanopub into the short name, improve metadata and publish it
    4. in case you need to **make a change regarding the types that apply** please follow these steps:
       - Check if and in which questions the **FSR** is used **in FIPs** by using this API: [**find FSRs in FIP**](https://github.com/peta-pico/dsw-nanopub-api/blob/main/tables/new_matrix_reduced.csv)
       - Adjust the choice in the FIP (and leave a comment to justify the adjustment)
