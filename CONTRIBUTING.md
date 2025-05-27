@@ -129,7 +129,7 @@ You perform the actions based on the reviewer decision.
 Before changing the metadata, it is recommended that you send an email to the creator of the FSR nanopub (the email address can be found in the FIP wizard if you are an admin) to inform them of your intended change. 
 
 Here a proposal for the email text:
-*I am an administrator of the FIP Wizard, trained by GO FAIR Foundation, and I help to improve the quality of the metadata of the FIP/FER resources. Following your entry and based on the peer-review process documented in the github issue number X, I want to make/made the following improvement:...,*  
+*I am a curator of the FIP Wizard, trained by GO FAIR Foundation, and I help to improve the quality of the metadata of the FIP/FER resources. Following your entry and based on the peer-review process documented in the github issue number X, I want to make/made the following improvement:...,*  
 
 If you don't get a reply within a reasonable time (max. two days), post a comment directly in the appropriate place in the FSR project in the FIP Wizard. 
 
