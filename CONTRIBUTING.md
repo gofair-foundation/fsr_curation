@@ -39,7 +39,7 @@ from GitHub: https://github.com/gofair-foundation/fsr_curation/issues - these is
 #### 1B. Check for duplicates
 
 1. Use the API: [check duplicates](https://peta-pico.github.io/tapas/tapas.html?api=peta-pico/dsw-nanopub-api&op=/find_gofair_qualified_things_x) by searching with the most common name (and similar names) of the FSR if there exists more than one nanopub.
-2. The goal is to keep only the most informative nanopub, bear in mind that you should also check for the most frequently used resource in the FIPs/SIPs. Check their utilisation using the FSR thing URI within the [FSR in FIP/SIP API](https://github.com/peta-pico/dsw-nanopub-api/blob/main/tables/new_matrix_reduced.csv). However the most frequently used nanopub may need to be improved (as per the process in [F3B](#f-3b-proposal-accept-with-improvements) below).
+2. The goal is to keep only the most informative nanopub, bear in mind that you should also check for the most frequently used resource in the FIPs/SIPs. Check their utilisation using the FSR thing URI within the [FSR in FIP/SIP API](https://knowledgepixels.com/csv_viewer/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fpeta-pico%2Fdsw-nanopub-api%2Frefs%2Fheads%2Fmain%2Ftables%2Fmatrix_reduced.csv). However the most frequently used nanopub may need to be improved (as per the process in [F3B](#f-3b-proposal-accept-with-improvements) below).
 3. Duplicates will need to be retracted/disapproved. Once retracted, all related GitHub issues will be automatically closed. Therefore it is essential that the same person(s) work on all duplicates of one resource.
 4. Start with the GitHub issue of the nanopub that you want to keep.  
 
