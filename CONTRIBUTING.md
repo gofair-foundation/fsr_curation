@@ -18,7 +18,7 @@ flowchart TD
     style E fill:#f7eb02
     E -->|reject proposal| F[3D: assign a second reviewer]
     E -->|request improvements|D
-    E -->|approve proposal|G{3: perfom action}
+    E -->|approve proposal|G{3: perform action}
     G -->|improvement required|H[3B: improve metadata]
     G -->|approve as is|I[3A: approve FSR nanopub]
     G -->|reject FSR nanopub|K[3C: retract/disapprove FSR nanopub]
