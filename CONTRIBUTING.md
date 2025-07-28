@@ -148,6 +148,11 @@ If you don't get a reply within a reasonable time (max. two days), post a commen
    5. disapprove the old nanopub that has been superseeded with the nanopub with improved metadata
    6. approve the FSR nanopub with the [approval nanopub template](https://nanodash.petapico.org/publish?34&template=https://w3id.org/np/RAi7_UxEF3TTPBp7lmWOVvKR-jUmZgDfY_ZIe57dqbOnQ&template-version=latest)
 
+When approving please add the [GO FAIR Foundation ROR](https://ror.org/056j50v04) as the organization that approves the nanopublication to make sure the curation badge is added in the drop-downs of the FSRs in the FIP Wizard. Add all the reviewers involved in the curation and the URI of github curation issue:
+
+<img width="285" height="93" alt="image" src="https://github.com/user-attachments/assets/a7e91853-251c-4482-92ac-4c7f32a84980" />
+<img width="1231" height="535" alt="image" src="https://github.com/user-attachments/assets/64dcd6d4-b945-42cc-a7a4-dd574e0e01e3" />
+
 #### Adding a reference to FAIRsharing records
 If a FAIRsharing DOI needs to be added, then in the FIP Wizard this can be added as a Resource URI to II.9 "Related resources to which this resource can be mapped to and which are used to derive its description". Similarly, in Nanodash this URI would be introduced as `exactMatch` in the last assertion statement and in the provenance of the nanopub use the statement "attributed to myself/others and (partly) derived from an existing entity" and add the DOI of the FAIRsharing record.
 
