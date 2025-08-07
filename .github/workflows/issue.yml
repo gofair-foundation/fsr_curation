@@ -18,6 +18,6 @@ jobs:
         uses: gofair-foundation/qualification-issue-creation-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          QUERYAPI: https://query.knowledgepixels.com/api/RAPSzp25pcesgOgLdbGzTr3uYiTIsx_3vloIFDM8JIxcY/list_nonqualifed_fsr
+          QUERYAPI: https://query.knowledgepixels.com/api/RAGltPUzB31SMPior1Tv1qZ7KCYu_YimxxWNp4qCW-Xks/list_nonqualifed_fsr
 
       
