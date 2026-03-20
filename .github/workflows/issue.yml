@@ -15,7 +15,7 @@ jobs:
           sparse-checkout: |
             .github
       - name: Create issues
-        uses: gofair-foundation/qualification-issue-creation-action@v2
+        uses: gofair-foundation/qualification-issue-creation-action@v2.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           QUERYAPI: https://query.knowledgepixels.com/api/RAGltPUzB31SMPior1Tv1qZ7KCYu_YimxxWNp4qCW-Xks/list_nonqualifed_fsr
