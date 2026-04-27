@@ -14,7 +14,7 @@ The whole curation process is supposed to be described in GitHub issues in this 
 flowchart TD
     A[1A: choose issue] 
     A-->B[1B: check for duplicates] -->C[1C: quality check] -->D[1D: propose an action]
-    D-->|assign a curator| E{2: decide}
+    D-->|assign a reviewer| E{2: decide}
     style E fill:#f7eb02
     E -->|reject proposal| F[3D: assign a second reviewer]
     E -->|request improvements|D
