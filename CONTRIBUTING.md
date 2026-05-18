@@ -32,9 +32,10 @@ flowchart TD
 ### **1 Curator actions**
 
 #### 1A. Choose an issue 
-from GitHub: https://github.com/gofair-foundation/fsr_curation/issues - these issues are created by a [GitHub action](#appendix-b-refreshing-the-github-issues-list) that looks at uncurated FSRs in Nanodash.  
-   These can be filtered by label (FSR type) from https://github.com/gofair-foundation/fsr_curation/labels  
-   Assign it to you (so that everybody can see that you are working on it)
+from GitHub: https://github.com/gofair-foundation/fsr_curation/issues - these issues are created by a [GitHub action](#appendix-b-refreshing-the-github-issues-list) that looks at uncurated FSRs in Nanodash. 
+1. These can be filtered by label (FSR type) from https://github.com/gofair-foundation/fsr_curation/labels.
+2. You can also filter to find tickets without assignees by using the Assignees filter.
+3. Assign it to you (so that everybody can see that you are working on it).
 
 #### 1B. Check for duplicates
 
