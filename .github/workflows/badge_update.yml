@@ -1,0 +1,16 @@
+name: badge_update
+
+on:
+  workflow_dispatch:
+
+jobs:
+  badge_text:
+    runs-on: ubuntu-latest
+    steps:
+      - id: date
+        run: echo "##[set-output name=data;]$(date)"
+      - uses: wow-actions/update-file@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: .github/badges/test.svg
+          content: ${{ steps.date.outputs.data }}
