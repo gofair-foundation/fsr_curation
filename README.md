@@ -1,4 +1,3 @@
-![Workflow status](.github/badges/workflow.svg)
 
 # Curation of FAIR Supporting Resource Metadata
 This repository supports the GO FAIR Foundation (GFF) process for curating the metadata of FAIR Supporting Resources (FSRs) including FAIR Enabling Resources (FERs) expressed as nanopublications. Uncurated nanopub resources are represented by open issues.
