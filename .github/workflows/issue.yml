@@ -9,9 +9,12 @@ jobs:
   issue_job:
     runs-on: ubuntu-latest
     steps:
+      - id: date
+        run: echo "##[set-output name=data;]$(date)"
       - name: Checkout the template
         uses: actions/checkout@v6.0.2
         with:
+          branch: badges
           sparse-checkout: |
             .github
       - name: Create issues
@@ -22,4 +25,38 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           QUERYAPI: https://query.knowledgepixels.com/api/RAGltPUzB31SMPior1Tv1qZ7KCYu_YimxxWNp4qCW-Xks/list_nonqualifed_fsr
 
-      
+      # Add an updated badge when the workflow succeeds
+      # Create the directory where badges will be saved, if needed
+      - name: Create destination directory
+        env:
+          BADGE_PATH: '.github/badges'
+        run: mkdir -p "${BADGE_PATH%/*}"
+
+      - name: Update badge
+        uses: emibcn/badge-action@v2.0.2
+        with:
+          label: 'Issue sync run'
+          status: ${{ steps.date.outputs.data }}
+          color: 'blue'
+          path: '.github/badges/workflow.svg'
+      - name: Upload badge as artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: badge
+          path: '.github/badges/workflow.svg'
+          if-no-files-found: error
+      - name: Commit badge
+        continue-on-error: true
+        env:
+          BADGE: '.github/badges/workflow.svg'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add "${BADGE}"
+          git commit -m "Add/Update badge"
+      - name: Push badge commit
+        uses: ad-m/github-push-action@master
+        if: ${{ success() }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: badges
