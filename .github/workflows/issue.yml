@@ -33,7 +33,7 @@ jobs:
         run: mkdir -p "${BADGE_PATH%/*}"
 
       - name: Update badge
-        uses: emibcn/badge-action@v2.0.2
+        uses: emibcn/badge-action@v2.0.4
         with:
           label: 'Issue sync run'
           status: ${{ steps.date.outputs.data }}
@@ -55,7 +55,7 @@ jobs:
           git add "${BADGE}"
           git commit -m "Add/Update badge"
       - name: Push badge commit
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v1.3.0
         if: ${{ success() }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
