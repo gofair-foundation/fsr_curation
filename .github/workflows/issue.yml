@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: date
-        run: echo "##[set-output name=data;]$(date)"
+        run: echo "{data}={$(date)}" >> $GITHUB_OUTPUT
       - name: Checkout the template
         uses: actions/checkout@v6.0.2
         with:
