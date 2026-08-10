@@ -17,9 +17,6 @@ jobs:
           ref: badges
           sparse-checkout: |
             .github
-      - run: |
-          echo ${{ github.workspace }}
-          echo $GITHUB_WORKSPACE
       - name: Create issues
         uses: gofair-foundation/qualification-issue-creation-action@v2.0.1
         with:
@@ -41,17 +38,17 @@ jobs:
           label: 'Issue sync run'
           status: ${{ steps.date.outputs.data }}
           color: 'blue'
-          path: "$GITHUB_WORKSPACE/.github/badges/workflow.svg"
+          path: "/home/runner/work/fsr_curation/fsr_curation/.github/badges/workflow.svg"
       - name: Upload badge as artifact
         uses: actions/upload-artifact@v7
         with:
           name: badge
-          path: "$GITHUB_WORKSPACE/.github/badges/workflow.svg"
+          path: "/home/runner/work/fsr_curation/fsr_curation/.github/badges/workflow.svg"
           if-no-files-found: error
       - name: Commit badge
         continue-on-error: true
         env:
-          BADGE: "$GITHUB_WORKSPACE/.github/badges/workflow.svg"
+          BADGE: "/home/runner/work/fsr_curation/fsr_curation/.github/badges/workflow.svg"
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
