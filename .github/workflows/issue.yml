@@ -9,12 +9,11 @@ jobs:
   issue_job:
     runs-on: ubuntu-latest
     steps:
-      - id: date
-        run: echo "{data}={$(date)}" >> $GITHUB_OUTPUT
       - name: Checkout the template
         uses: actions/checkout@v6.0.2
         with:
-          ref: badges
+          sparse-checkout: |
+            .github
       - name: Create issues
         uses: gofair-foundation/qualification-issue-creation-action@v2.0.1
         with:
@@ -22,48 +21,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           QUERYAPI: https://query.knowledgepixels.com/api/RAGltPUzB31SMPior1Tv1qZ7KCYu_YimxxWNp4qCW-Xks/list_nonqualifed_fsr
-
-      # Add an updated badge when the workflow succeeds
-      - name: Update badge
-        uses: emibcn/badge-action@v2.0.4
-        with:
-          label: 'Issue sync run'
-          status: ${{ steps.date.outputs.data }}
-          color: 'blue'
-          path: "/home/runner/work/fsr_curation/fsr_curation/.github/badges/workflow.svg"
-      - name: Upload badge as artifact
-        uses: actions/upload-artifact@v7
-        with:
-          name: badge
-          path: "/home/runner/work/fsr_curation/fsr_curation/.github/badges/workflow.svg"
-          if-no-files-found: error
-      - name: Commit badge
-        continue-on-error: true
-        env:
-          BADGE: "/home/runner/work/fsr_curation/fsr_curation/.github/badges/workflow.svg"
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add "${BADGE}"
-          git commit -m "Add/Update badge"
-      - name: Push badge commit
-        uses: ad-m/github-push-action@v1.3.0
-        if: ${{ success() }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: badges
-
-      # Handle the PR
-      - name: Create Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v8
-        with:
-          token: ${{ secrets.PAT }}
-
-      - name: Enable Pull Request Automerge
-        if: steps.cpr.outputs.pull-request-operation == 'created'
-        uses: peter-evans/enable-pull-request-automerge@v3
-        with:
-          token: ${{ secrets.PAT }}
-          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
-          merge-method: squash
