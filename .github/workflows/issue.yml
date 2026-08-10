@@ -15,8 +15,6 @@ jobs:
         uses: actions/checkout@v6.0.2
         with:
           ref: badges
-          sparse-checkout: |
-            .github
       - name: Create issues
         uses: gofair-foundation/qualification-issue-creation-action@v2.0.1
         with:
