@@ -24,12 +24,6 @@ jobs:
           QUERYAPI: https://query.knowledgepixels.com/api/RAGltPUzB31SMPior1Tv1qZ7KCYu_YimxxWNp4qCW-Xks/list_nonqualifed_fsr
 
       # Add an updated badge when the workflow succeeds
-      # Create the directory where badges will be saved, if needed
-      - name: Create destination directory
-        env:
-          BADGE_PATH: '.github/badges'
-        run: mkdir -p "${BADGE_PATH%/*}"
-
       - name: Update badge
         uses: emibcn/badge-action@v2.0.4
         with:
