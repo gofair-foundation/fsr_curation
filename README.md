@@ -1,3 +1,4 @@
+[![issue_creation](https://github.com/gofair-foundation/fsr_curation/actions/workflows/issue.yml/badge.svg)](https://github.com/gofair-foundation/fsr_curation/actions/workflows/issue.yml)
 
 # Curation of FAIR Supporting Resource Metadata
 This repository supports the GO FAIR Foundation (GFF) process for curating the metadata of FAIR Supporting Resources (FSRs) including FAIR Enabling Resources (FERs) expressed as nanopublications. Uncurated nanopub resources are represented by open issues.
