@@ -38,17 +38,17 @@ jobs:
           label: 'Issue sync run'
           status: ${{ steps.date.outputs.data }}
           color: 'blue'
-          path: '.github/badges/workflow.svg'
+          path: "${GITHUB_WORKSPACE}/.github/badges/workflow.svg"
       - name: Upload badge as artifact
         uses: actions/upload-artifact@v7
         with:
           name: badge
-          path: '.github/badges/workflow.svg'
+          path: "${GITHUB_WORKSPACE}/.github/badges/workflow.svg"
           if-no-files-found: error
       - name: Commit badge
         continue-on-error: true
         env:
-          BADGE: '.github/badges/workflow.svg'
+          BADGE: "${GITHUB_WORKSPACE}/.github/badges/workflow.svg"
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
