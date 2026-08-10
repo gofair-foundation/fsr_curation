@@ -14,8 +14,7 @@ jobs:
       - name: Checkout the template
         uses: actions/checkout@v6.0.2
         with:
-          sparse-checkout: |
-            .github
+          ref: badges
       - name: Create issues
         uses: gofair-foundation/qualification-issue-creation-action@v2.0.1
         with:
@@ -52,3 +51,19 @@ jobs:
         if: ${{ success() }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: badges
+
+      # Handle the PR
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Enable Pull Request Automerge
+        if: steps.cpr.outputs.pull-request-operation == 'created'
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+          merge-method: squash
